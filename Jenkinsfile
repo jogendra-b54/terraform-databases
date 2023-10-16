@@ -5,9 +5,7 @@
     options {
         ansiColor('xterm')
     }
-    environment {
-      SSHCRED  = credentials('SSH_CRED')
-    }
+    
      parameters {
         choice(name: 'ENV', choices: ['dev', 'prod'], description: 'Select the Environment')
         choice(name: 'ACTION', choices: ['apply', 'destroy'], description: 'Select Create or Destroy')
