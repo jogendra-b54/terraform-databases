@@ -8,5 +8,12 @@ module "redis" {
   ENV                 = var.ENV
 }
 
+
+module "mysql" {
+  source              = "./vendor/modules/mysql"
+  ENV                 = var.ENV
+}
+
+
 # // You cannot variablize this piece of code in the source parameter
 
