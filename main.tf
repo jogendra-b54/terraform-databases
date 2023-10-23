@@ -14,6 +14,11 @@ module "mysql" {
   ENV                 = var.ENV
 }
 
+module "rabbitmq" {
+  source              = "./vendor/modules/rabbitmq"
+  ENV                 = var.ENV
+}
+
 
 # // You cannot variablize this piece of code in the source parameter
 
