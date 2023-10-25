@@ -17,3 +17,8 @@ variable "REDIS_PORT_NUMBER" {}
 variable "REDIS_INSTANCE_TYPE" {}
 variable "REDIS_INSTANCE_COUNT" {}
 variable "REDIS_ENGINE_VERSION" {}
+
+#RabbitMQ variables
+variable "RABBITMQ_PORT_NUMBER" {}
+variable "RABBITMQ_INSTANCE_TYPE" {}
+   
