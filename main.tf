@@ -43,6 +43,6 @@ module "locals" {
 
 # // You cannot variablize this piece of code in the source parameter
 
-# output "data" {
-#   value = module.docdb.data
-# }
+output "data" {
+  value = module.docdb.data
+}
