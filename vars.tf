@@ -22,4 +22,3 @@ variable "REDIS_ENGINE_VERSION" {}
 variable "RABBITMQ_PORT_NUMBER" {}
 variable "RABBITMQ_INSTANCE_TYPE" {}
 
-variable "locals" {}
