@@ -33,6 +33,13 @@ module "rabbitmq" {
    
 }
 
+module "locals" {
+  source         = "./vendor/modules/docdb"
+  DOCDB_USER     = var.DOCDB_USER
+  DOCDB_PASS     = var.DOCDB_PASS
+   
+}
+
 
 # // You cannot variablize this piece of code in the source parameter
 
