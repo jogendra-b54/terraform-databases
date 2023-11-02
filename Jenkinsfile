@@ -1,32 +1,37 @@
- pipeline {
-    agent { label 'WS' }
-    options {
-        ansiColor('xterm')
-    }
+@Library('roboshop-shared-library') _
+
+env.REPONAME ="terraform-databases"
+infra()
+
+//  pipeline {
+//     agent { label 'WS' }
+//     options {
+//         ansiColor('xterm')
+//     }
     
-     parameters {
-        choice(name: 'ENV', choices: ['dev', 'prod'], description: 'Select the Environment')
-        choice(name: 'ACTION', choices: ['apply', 'destroy'], description: 'Select Create or Destroy')
-    }
+//      parameters {
+//         choice(name: 'ENV', choices: ['dev', 'prod'], description: 'Select the Environment')
+//         choice(name: 'ACTION', choices: ['apply', 'destroy'], description: 'Select Create or Destroy')
+//     }
   
   
- stages {
+//  stages {
                  
-        stage('terraform init'){
-             steps {
-                sh "terrafile -f env-${ENV}/Terrafile"
-                sh "terraform init -backend-config=env-${ENV}/${ENV}-backend.tfvars"
-             }
-        }
-        stage('terraform plan'){
-             steps {
-                sh "terraform plan -var-file=env-${ENV}/${ENV}.tfvars"
-             }
-        }
-        stage('terraform apply'){
-             steps {
-                sh "terraform ${ACTION} -auto-approve -var-file=env-${ENV}/${ENV}.tfvars"
-             }
-        }
-    }
- }
+//         stage('terraform init'){
+//              steps {
+//                 sh "terrafile -f env-${ENV}/Terrafile"
+//                 sh "terraform init -backend-config=env-${ENV}/${ENV}-backend.tfvars"
+//              }
+//         }
+//         stage('terraform plan'){
+//              steps {
+//                 sh "terraform plan -var-file=env-${ENV}/${ENV}.tfvars"
+//              }
+//         }
+//         stage('terraform apply'){
+//              steps {
+//                 sh "terraform ${ACTION} -auto-approve -var-file=env-${ENV}/${ENV}.tfvars"
+//              }
+//         }
+//     }
+//  }
