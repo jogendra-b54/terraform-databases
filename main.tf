@@ -6,32 +6,32 @@ module "docdb" {
   DOCDB_INSTANCE_COUNT  = var.DOCDB_INSTANCE_COUNT
 }
 
-module "redis" {
-  source                = "./vendor/modules/redis"
-  ENV                   = var.ENV
-  REDIS_PORT_NUMBER     = var.REDIS_PORT_NUMBER
-  REDIS_INSTANCE_TYPE   = var.REDIS_INSTANCE_TYPE
-  REDIS_INSTANCE_COUNT  = var.REDIS_INSTANCE_COUNT
-  REDIS_ENGINE_VERSION  = var.REDIS_ENGINE_VERSION
-}
+# module "redis" {
+#   source                = "./vendor/modules/redis"
+#   ENV                   = var.ENV
+#   REDIS_PORT_NUMBER     = var.REDIS_PORT_NUMBER
+#   REDIS_INSTANCE_TYPE   = var.REDIS_INSTANCE_TYPE
+#   REDIS_INSTANCE_COUNT  = var.REDIS_INSTANCE_COUNT
+#   REDIS_ENGINE_VERSION  = var.REDIS_ENGINE_VERSION
+# }
 
 
-module "mysql" {
-  source              = "./vendor/modules/mysql"
-  ENV                 = var.ENV
-    MYSQL_PORT_NUMBER     = var.MYSQL_PORT_NUMBER
-  MYSQL_STORAGE         = var.MYSQL_STORAGE
-  MYSQL_ENGINE_VERSION  = var.MYSQL_ENGINE_VERSION
-  MYSQL_INSTANCE_TYPE   =  var.MYSQL_INSTANCE_TYPE
-}
+# module "mysql" {
+#   source              = "./vendor/modules/mysql"
+#   ENV                 = var.ENV
+#     MYSQL_PORT_NUMBER     = var.MYSQL_PORT_NUMBER
+#   MYSQL_STORAGE         = var.MYSQL_STORAGE
+#   MYSQL_ENGINE_VERSION  = var.MYSQL_ENGINE_VERSION
+#   MYSQL_INSTANCE_TYPE   =  var.MYSQL_INSTANCE_TYPE
+# }
 
-module "rabbitmq" {
-  source                   = "./vendor/modules/rabbitmq"
-  ENV                      = var.ENV
-  RABBITMQ_PORT_NUMBER     = var.RABBITMQ_PORT_NUMBER
-  RABBITMQ_INSTANCE_TYPE   = var.RABBITMQ_INSTANCE_TYPE
+# module "rabbitmq" {
+#   source                   = "./vendor/modules/rabbitmq"
+#   ENV                      = var.ENV
+#   RABBITMQ_PORT_NUMBER     = var.RABBITMQ_PORT_NUMBER
+#   RABBITMQ_INSTANCE_TYPE   = var.RABBITMQ_INSTANCE_TYPE
    
-}
+# }
 
 
 
