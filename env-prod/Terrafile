@@ -2,9 +2,10 @@ docdb:
     source:  "https://github.com/jogendra-b54/tf-module-docdb.git"
     version: "main"
 
-# redis:
-#     source:  "https://github.com/jogendra-b54/tf-module-redis.git"
-#     version: "main"
+redis:
+     source:  "https://github.com/jogendra-b54/tf-module-redis.git"
+     version: "main"
+
 # mysql:
 #     source:  "https://github.com/jogendra-b54/tf-module-mysql.git"
 #     version: "main"
