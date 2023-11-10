@@ -6,14 +6,14 @@ module "docdb" {
   #DOCDB_INSTANCE_COUNT  = var.DOCDB_INSTANCE_COUNT
 }
 
-# module "redis" {
-#   source                = "./vendor/modules/redis"
-#   ENV                   = var.ENV
+ module "redis" {
+   source                = "./vendor/modules/redis"
+   ENV                   = var.ENV
 #   REDIS_PORT_NUMBER     = var.REDIS_PORT_NUMBER
 #   REDIS_INSTANCE_TYPE   = var.REDIS_INSTANCE_TYPE
 #   REDIS_INSTANCE_COUNT  = var.REDIS_INSTANCE_COUNT
 #   REDIS_ENGINE_VERSION  = var.REDIS_ENGINE_VERSION
-# }
+ }
 
 
 # module "mysql" {
